@@ -27,27 +27,35 @@ Frontend Package (automatic lintin, building and minification)
 Proper UX / UI design (looks plain bootstrap)
 
 # Run
-move to project root folder
 
-Create and activate a virtualenv (Python 3)
+0) move to project root folder
 
-pipenv --python 3 shell
-Install requirements
-pipenv install
-Create a MySQL database
-CREATE DATABASE chat CHARACTER SET utf8;
-Start Redis Server
-redis-server
-Init database
-./manage.py migrate
-Run tests
-./manage.py test
-Create admin user
+1) Create and activate a virtualenv (Python 3)
+
+  pipenv --python 3 shell
+  Install requirements
+  pipenv install
+  Create a MySQL database
+  CREATE DATABASE chat CHARACTER SET utf8;
+  Start Redis Server
+  redis-server
+  Init database
+  ./manage.py migrate
+
+2) Run tests
+
+ ./manage.py test
+
+3) Create admin user
+
 ./manage.py createsuperuser
-Run development server
+
+4) Run development server
+
 ./manage.py runserver
-To override default settings, create a local_settings.py file in the chat folder.
 
-Message prefetch config (load last n messages):
+5) To override default settings, create a local_settings.py file in the chat folder.
 
-MESSAGES_TO_LOAD = 15
+ Message prefetch config (load last n messages):
+
+ MESSAGES_TO_LOAD = 15
